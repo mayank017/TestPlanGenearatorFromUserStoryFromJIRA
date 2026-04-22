@@ -1,0 +1,11 @@
+name: "Security Testing"
+description: "Security vulnerability validation"
+coverage:
+  - type: "Security"
+    description: "Security checks"
+    weight: 60
+  - type: "Negative"
+    description: "Negative security tests"
+    weight: 40
+min_cases: 5
+tone: "technical"

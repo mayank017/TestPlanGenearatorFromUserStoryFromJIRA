@@ -1,0 +1,17 @@
+name: "Regression Testing"
+description: "Ensures changes don't break existing features"
+coverage:
+  - type: "Positive"
+    description: "Happy path validation"
+    weight: 40
+  - type: "Negative"
+    description: "Error handling"
+    weight: 30
+  - type: "Edge"
+    description: "Boundary conditions"
+    weight: 15
+  - type: "Boundary"
+    description: "Boundary value testing"
+    weight: 15
+min_cases: 5
+tone: "technical"

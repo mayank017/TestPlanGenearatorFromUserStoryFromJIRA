@@ -1,0 +1,14 @@
+name: "Functional Testing"
+description: "Validates core features work as specified"
+coverage:
+  - type: "Positive"
+    description: "Happy path validation"
+    weight: 50
+  - type: "Negative"
+    description: "Error handling"
+    weight: 30
+  - type: "Edge"
+    description: "Boundary conditions"
+    weight: 20
+min_cases: 5
+tone: "technical"

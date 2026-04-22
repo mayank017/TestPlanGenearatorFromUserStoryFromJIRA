@@ -1,0 +1,11 @@
+name: "Smoke Testing"
+description: "Critical path validation"
+coverage:
+  - type: "Positive"
+    description: "Happy path validation"
+    weight: 70
+  - type: "Negative"
+    description: "Error handling"
+    weight: 30
+min_cases: 5
+tone: "technical"

@@ -1,0 +1,14 @@
+name: "Edge Case Testing"
+description: "Boundary and extreme conditions"
+coverage:
+  - type: "Edge"
+    description: "Edge cases"
+    weight: 50
+  - type: "Boundary"
+    description: "Boundary values"
+    weight: 30
+  - type: "Negative"
+    description: "Negative scenarios"
+    weight: 20
+min_cases: 5
+tone: "technical"
