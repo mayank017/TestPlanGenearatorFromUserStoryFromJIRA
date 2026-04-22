@@ -70,8 +70,9 @@ function App() {
         setConnectionError(response.error || 'Connection failed');
       }
     } catch (err: any) {
-      setConnectionStatus('error');
-      setConnectionError(err.response?.data?.error || 'Connection failed');
+      const errData = err.response?.data;
+      const msg = typeof errData?.error === 'string' ? errData.error : errData?.error?.message || err.message || 'Connection failed';
+      setConnectionError(msg);
     }
   }, [baseUrl, email, apiToken]);
 
@@ -108,8 +109,9 @@ function App() {
         setFetchError(response.error || 'Failed to fetch issue');
       }
     } catch (err: any) {
-      setFetchStatus('error');
-      setFetchError(err.response?.data?.error || 'Failed to fetch issue');
+      const errData = err.response?.data;
+      const msg = typeof errData?.error === 'string' ? errData.error : errData?.error?.message || err.message || 'Failed to fetch issue';
+      setFetchError(msg);
     }
   }, [ticketId, baseUrl, email, apiToken]);
 
@@ -139,8 +141,9 @@ function App() {
       setTestCases(response.test_cases);
       setGenerationStatus('success');
     } catch (err: any) {
-      setGenerationStatus('error');
-      setGenerationError(err.response?.data?.detail || 'Failed to generate test cases');
+      const errData = err.response?.data;
+      const msg = typeof errData?.detail === 'string' ? errData.detail : typeof errData?.error === 'string' ? errData.error : errData?.error?.message || err.message || 'Failed to generate test cases';
+      setGenerationError(msg);
     }
   }, [issueData, template, groqApiKey]);
 
