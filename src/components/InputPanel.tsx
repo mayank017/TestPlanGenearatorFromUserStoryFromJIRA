@@ -1,5 +1,5 @@
 import { Loader2, AlertCircle } from 'lucide-react';
-import type { IssueData, GenerationStatus, TemplateType, TEMPLATES } from '../types';
+import type { IssueData, GenerationStatus } from '../types';
 
 interface InputPanelProps {
   ticketId: string;
